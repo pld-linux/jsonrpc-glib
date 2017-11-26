@@ -1,8 +1,7 @@
-Summary:	jsonrpc-glib - a library providing serialization and deserialization support for the JSON format
-Summary(pl.UTF-8):	jsonrpc-glib - biblioteka zapewniająca serializację i deserializację dla formatu JSON
+Summary:	jsonrpc-glib - a library to communicate with JSON-RPC based peers
 Name:		jsonrpc-glib
 Version:	3.26.1
-Release:	0.2
+Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/jsonrpc-glib/3.26/%{name}-%{version}.tar.xz
@@ -20,14 +19,8 @@ Requires:	glib2 >= 1:2.44.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-jsonrpc-glib is a library providing serialization and deserialization
-support for the JavaScript Object Notation (JSON) format described by
-RFC 4627.
-
-%description -l pl.UTF-8
-jsonrpc-glib to biblioteka zapewniająca obsługę serializacji i
-deserializacji dla formatu JSON (JavaScript Object Notation) opisanego
-w RFC 4627.
+Jsonrpc-GLib is a library to communicate with JSON-RPC based peers in
+either a synchronous or asynchronous fashion.
 
 %package devel
 Summary:	Header files for the jsonrpc-glib library
