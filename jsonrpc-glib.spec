@@ -1,11 +1,11 @@
 Summary:	jsonrpc-glib - a library to communicate with JSON-RPC based peers
 Name:		jsonrpc-glib
-Version:	3.26.1
+Version:	3.28.0
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/jsonrpc-glib/3.26/%{name}-%{version}.tar.xz
-# Source0-md5:	e40e4485223ee021ee069b54aced28da
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/jsonrpc-glib/3.28/%{name}-%{version}.tar.xz
+# Source0-md5:	6b41c0876214d7ab513a398166848ae8
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	gettext-tools >= 0.18
 BuildRequires:	glib2-devel >= 1:2.44.0
@@ -90,13 +90,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc NEWS README.md
-%attr(755,root,root) %{_libdir}/libjsonrpc_glib-1.0.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libjsonrpc_glib-1.0.so.0
+%attr(755,root,root) %{_libdir}/libjsonrpc-glib-1.0.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libjsonrpc-glib-1.0.so.1
 %{_libdir}/girepository-1.0/Jsonrpc-1.0.typelib
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libjsonrpc_glib-1.0.so
+%attr(755,root,root) %{_libdir}/libjsonrpc-glib-1.0.so
 %{_datadir}/gir-1.0/Jsonrpc-1.0.gir
 %{_includedir}/jsonrpc-glib-1.0
 %{_pkgconfigdir}/jsonrpc-glib-1.0.pc
