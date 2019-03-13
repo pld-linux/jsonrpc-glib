@@ -1,7 +1,7 @@
 Summary:	jsonrpc-glib - a library to communicate with JSON-RPC based peers
 Name:		jsonrpc-glib
 Version:	3.30.1
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/jsonrpc-glib/3.30/%{name}-%{version}.tar.xz
