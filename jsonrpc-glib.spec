@@ -6,12 +6,12 @@
 Summary:	jsonrpc-glib - a library to communicate with JSON-RPC based peers
 Summary(pl.UTF-8):	jsonrpc-glib - biblioteka do komunikacji poprzez JSON-RPC
 Name:		jsonrpc-glib
-Version:	3.34.0
+Version:	3.38.0
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/jsonrpc-glib/3.34/%{name}-%{version}.tar.xz
-# Source0-md5:	59dc01416650c54cbf88d28742d053ce
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/jsonrpc-glib/3.38/%{name}-%{version}.tar.xz
+# Source0-md5:	16b6027630df63146284deda1125481e
 URL:		https://gitlab.gnome.org/GNOME/jsonrpc-glib
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	gettext-tools >= 0.18
@@ -66,7 +66,7 @@ Summary:	jsonrpc-glib API documentation
 Summary(pl.UTF-8):	Dokumentacja API jsonrpc-glib
 Group:		Documentation
 Requires:	gtk-doc-common
-%if "%{_rpmversion}" >= "5"
+%if "%{_rpmversion}" >= "4.6"
 BuildArch:	noarch
 %endif
 
@@ -82,7 +82,7 @@ Summary(pl.UTF-8):	API jsonrpc-glib dla języka Vala
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Requires:	vala >= 2:0.18.0
-%if "%{_rpmversion}" >= "5"
+%if "%{_rpmversion}" >= "4.6"
 BuildArch:	noarch
 %endif
 
@@ -98,7 +98,6 @@ API jsonrpc-glib dla języka Vala.
 %build
 %meson build \
 	%{!?with_static_libs:--default-library=shared} \
-	-Dintrospection=true \
 	%{?with_apidocs:-Denable_gtk_doc=true}
 
 %ninja_build -C build
