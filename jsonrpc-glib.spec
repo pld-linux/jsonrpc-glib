@@ -66,9 +66,7 @@ Summary:	jsonrpc-glib API documentation
 Summary(pl.UTF-8):	Dokumentacja API jsonrpc-glib
 Group:		Documentation
 Requires:	gtk-doc-common
-%if "%{_rpmversion}" >= "4.6"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 jsonrpc-glib API documentation.
@@ -82,9 +80,7 @@ Summary(pl.UTF-8):	API jsonrpc-glib dla języka Vala
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Requires:	vala >= 2:0.18.0
-%if "%{_rpmversion}" >= "4.6"
 BuildArch:	noarch
-%endif
 
 %description -n vala-jsonrpc-glib
 jsonrpc-glib API for Vala language.
