@@ -6,18 +6,18 @@
 Summary:	jsonrpc-glib - a library to communicate with JSON-RPC based peers
 Summary(pl.UTF-8):	jsonrpc-glib - biblioteka do komunikacji poprzez JSON-RPC
 Name:		jsonrpc-glib
-Version:	3.40.0
+Version:	3.42.0
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
-Source0:	https://download.gnome.org/sources/jsonrpc-glib/3.40/%{name}-%{version}.tar.xz
-# Source0-md5:	8d2f85cc440734f5b6df3dbddb448eb8
+Source0:	https://download.gnome.org/sources/jsonrpc-glib/3.42/%{name}-%{version}.tar.xz
+# Source0-md5:	d404be0109f7124ff6b00944d89661c2
 URL:		https://gitlab.gnome.org/GNOME/jsonrpc-glib
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	gettext-tools >= 0.18
 BuildRequires:	glib2-devel >= 1:2.44.0
 BuildRequires:	gobject-introspection-devel >= 0.9.5
-%{?with_apidocs:BuildRequires:	gtk-doc >= 1.20}
+%{?with_apidocs:BuildRequires:	gi-docgen}
 BuildRequires:	json-glib-devel
 BuildRequires:	meson >= 0.49.2
 BuildRequires:	ninja >= 1.5
@@ -103,6 +103,12 @@ API jsonrpc-glib dla języka Vala.
 rm -rf $RPM_BUILD_ROOT
 
 %ninja_install -C build
+
+%if %{with apidocs}
+# FIXME: where to package gi-docgen generated docs?
+install -d $RPM_BUILD_ROOT%{_gtkdocdir}
+%{__mv} $RPM_BUILD_ROOT%{_docdir}/jsonrpc-glib $RPM_BUILD_ROOT%{_gtkdocdir}
+%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
