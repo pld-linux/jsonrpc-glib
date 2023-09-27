@@ -66,7 +66,6 @@ Statyczna biblioteka jsonrpc-glib.
 Summary:	jsonrpc-glib API documentation
 Summary(pl.UTF-8):	Dokumentacja API jsonrpc-glib
 Group:		Documentation
-Requires:	gtk-doc-common
 BuildArch:	noarch
 
 %description apidocs
