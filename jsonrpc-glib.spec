@@ -23,7 +23,7 @@ BuildRequires:	meson >= 0.49.2
 BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-build >= 4.6
-BuildRequires:	rpmbuild(macros) >= 2.029
+BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	vala
 Requires:	glib2 >= 1:2.44.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
