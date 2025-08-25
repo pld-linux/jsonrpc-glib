@@ -6,12 +6,12 @@
 Summary:	jsonrpc-glib - a library to communicate with JSON-RPC based peers
 Summary(pl.UTF-8):	jsonrpc-glib - biblioteka do komunikacji poprzez JSON-RPC
 Name:		jsonrpc-glib
-Version:	3.44.1
+Version:	3.44.2
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	https://download.gnome.org/sources/jsonrpc-glib/3.44/%{name}-%{version}.tar.xz
-# Source0-md5:	7c1876357111cd41f6fe73ff6595868c
+# Source0-md5:	9bea5d70aaf8bcb1c72572b45b9a1309
 URL:		https://gitlab.gnome.org/GNOME/jsonrpc-glib
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	gettext-tools >= 0.18
